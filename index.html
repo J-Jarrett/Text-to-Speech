@@ -13,6 +13,7 @@
         <div class="col-md-6 text-center">
             <h1>Text to Speech</h1>
             <p>Using Google's Web Speech API to speak text from an input.</p>
+            <p>Note: This API is not accepted on some browsers, such as Internet Explorer and Opera. Please see Docs.</p>
             <div class="row">
                 <div class="col-md-6 mx-auto mb-2">
                 <form>
@@ -29,7 +30,9 @@
                         <div id="pitch-value" class="badge bg-primary float-end">1</div>
                         <input type="range" name="" id="pitch" class="form-range" min="0" max="2" value="1" step="0.1">
                     </div>
-                    <div class="form-group"></div>
+                    <div class="form-group">
+                        <select id="voice-select" class="form-control form-control-lg"></select>
+                    </div>
                 </form>
             </div>
             <button class="btn btn-lg btn-primary w-100 m-2">Speak</button>
@@ -39,6 +42,6 @@
 
 
     
-    <!-- <script src="main.js"></script> -->
+    <script src="main.js"></script>
 </body>
 </html>
