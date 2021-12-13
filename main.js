@@ -56,7 +56,6 @@ const getVoices = () => {
         voiceSelect.appendChild(option);
     })    
     // console.log(voiceSelect); // SEE DUPLICATION BOGGLE BELOW
-
 }
 
 // ============= ********  SOMETHING HERE IS DUPLICATING, IS IT CALLING THE FUNCTION FROM OUTSIDE? 
@@ -68,7 +67,7 @@ getVoices();
 if (synth.onvoiceschanged !== undefined) {
     synth.onvoiceschanged = getVoices;
 }
-// console.log(voiceSelect);
+console.log(voiceSelect);
 
 // ==================************** END POSS DUPLICATION
 
@@ -146,3 +145,6 @@ pitch.addEventListener("change", e=>{
 
 // change in voice selected? call speak function again
 voiceSelect.addEventListener("change", e=>speak());
+
+// Definitely murphy time. 
+// it makes no sound at all.
